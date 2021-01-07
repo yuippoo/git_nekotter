@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>スライドショー</title>
+  <link rel="stylesheet" href="slick.css">
+  <link rel="stylesheet" href="slick-theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="slick1">
+  <div><img src="images/1.jpg" alt=""></div>
+  <div><img src="images/2.jpg" alt=""></div>
+  <div><img src="images/3.jpg" alt=""></div>
+  <div><img src="images/4.jpg" alt=""></div>
+  <div><img src="images/5.jpg" alt=""></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="slick.min.js"></script>
+
+<script type="text/javascript">
+  $(function(){
+      $('.slick1').slick({
+        autoplay: true,
+        dots: true,
+      });
+    });
+</script>
+
+</body>
+</html>

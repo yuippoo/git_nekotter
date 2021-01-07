@@ -1,0 +1,21 @@
+<% provide :title, " | #{@user.name}さん" %>
+
+<div class="row form user_profile">
+  <div class="col-lg-12">
+    <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
+    <h2><%= @user.name %><span><%= @user.name_kana %></span></h2>
+    <% if current_user.id == @user.id %>
+      <div class="profile_edit">
+        <%= link_to 'プロフィール編集', edit_user_path(current_user), {class: 'btn btn-primary withripple' }%>
+      </div>
+    <% end %>
+    
+    <% if @questions.present? %>
+      <h3>このユーザーの回答した質問</h3>
+      <div class='clearfix'>
+        <%= render partial: 'users/question', collection: @questions %>
+      </div>
+    <% end %>
+  </div>
+</div>
+    

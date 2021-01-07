@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/style.css">
+
+<div class="tweets">
+  <% @tweets.each do |tweet| %>
+    <div class="tweet" style="background-image: url(<%= tweet.image %>)">
+      <p class="tweet-text"><%= tweet.text %></p>
+    </div>
+  <% end %>
+</div>  

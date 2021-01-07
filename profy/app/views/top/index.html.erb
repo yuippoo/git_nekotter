@@ -1,0 +1,24 @@
+<% unless current_user.full_profile? %>
+  <header class="header_top panel panel-default col-lg-12 no-profile">
+    <h2>まずは、あなたの基本プロフィールを登録しましょう！</h2>
+    <p>Profyは友達の質問に答えながらプロフィールを作るサービスです！</p>
+    <%= link_to "プロフィールを登録する", edit_user_path(current_user), { class: "btn btn-lg btn-primary withripple" } %>
+  </header>
+<% else %>
+  <div class="posting_form top_content">
+    <header class="posting_header">
+      <div class="posting_image icon_image" style="background-image: url(<%= rails_blob_path( current_user.image) %>);"></div>
+      <div class="posting_user_info user_info">
+        <%= current_user.name %>
+      </div>
+    </header>
+    <%= form_for(@question) do |f| %>
+      <%= f.text_field :text, placeholder: "例：好きな食べ物は？" %>
+      <%= f.submit "質問する" %>
+    <% end %>
+  </div>
+  
+  <%= render @feed_contents_resource %>
+
+  <%= paginate(@feed_contents) %>
+<% end %>

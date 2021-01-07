@@ -1,0 +1,10 @@
+<div class="contents">
+  <h2>投稿する</h2>
+  <%= form_tag('/tweets', method: :post, class: "clearfix") do %>
+    <img src="/assets/cat1.png">
+    <textarea cols="30" name="text" rows="4"></textarea>
+    <div class="button-box">
+      <input type="submit" class="submit-button">
+    </div>
+  <% end %>
+</div>

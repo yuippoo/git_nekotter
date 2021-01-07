@@ -1,0 +1,16 @@
+body {
+    background-color: orange;
+}
+
+.slick1{
+    width: 800px;
+    height: 600px;
+    margin: 50px auto;
+}
+
+img {
+    width: 800px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+}

@@ -1,0 +1,7 @@
+<%= form_for @memo do |f| %>
+  <%= f.text_field :text %>
+  <%= f.submit '投稿' %>
+<% end %>
+<ul>
+  <%= render @memos %>
+</ul>

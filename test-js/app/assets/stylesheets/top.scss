@@ -1,0 +1,42 @@
+body{
+  background-color: #f5f5f5;
+}
+
+.tab-menu {
+  width: 500px;
+  margin-left: 60px;
+
+  ul { /* .tab-menuの中のulに対する記述 */
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  li { /* .tab-menuの中のli */
+    display: inline-block;
+    width: 120px;
+    height: 22px;
+    padding: 10px 10px 5px;
+    cursor: pointer;
+    background-color: #AECD6A;
+    border-top-right-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+
+    &.selected {/* .tab-menuの中のliの内、.selectedが与えられているものに対する記述 */
+      background-color: #fff;
+      color: #AECD6A;
+    }
+  }
+}
+
+.contents {
+  background-color: #fff;
+  height: 360px;
+  padding: 20px;
+
+  .right { /* .contentsの中の.rightに対する記述 */
+    display: none;  /* 最初、右のコンテンツは非表示にする */
+  }
+}
